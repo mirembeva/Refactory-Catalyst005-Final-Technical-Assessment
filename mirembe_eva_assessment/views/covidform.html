@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/ec.css">
+</head>
+    <style>
+        .container{
+            margin: 20px auto 0 auto;
+            width: 60%;
+            border: 1px solid grey;
+
+        }
+        .upper-div{
+            display: flex
+        }
+        .flag{
+            height:30%;
+            padding:10px
+        }
+        .black{
+            background-color: black;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .red{
+            background-color: red;
+        }
+        .header{
+            text-align: center;
+            font-size: 20px;
+        }
+        .reg_form{
+            text-align: left;
+        }
+        .submit-btn{
+            float: right;
+            padding: 0 40px 0 40px;
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="row upper-div" >
+            <div class="col-sm-5">
+                <div class="flag black vh-20"></div>
+                <div class="flag yellow"></div>
+                <div class="flag red"></div>
+            </div>
+            <div class="col-sm-2">
+                <img src="../public/images/court.jpg" class="img-fluid" alt="Responsive image" width="150px">
+            </div>
+            <div class="col-sm-5">
+                <div class="flag black"></div>
+                <div class="flag yellow"></div>
+                <div class="flag red"></div>
+            </div>
+        </div>
+        <div class="header">
+            Ministry of Health
+       
+        <div class="header covid">
+            <h4><b>Covid-19 (Corona Virus)</b></h4>
+        </div>
+        <div class="header">
+            Virus-Test Registration Form
+        </div>
+
+        <div class="reg_form">
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="surname">Surname</label>
+                    <input type="text" class="form-control" id="surname" name="surname">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="givenname">Given Name</label>
+                    <input type="text" class="form-control" id="givenname" name="givenname">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="dateofbirth">Date Of Birth</label>
+                      <input type="text" class="form-control" id="dateofbirth" name="dateofbirth"  placeholder="YY/MM/DD">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="residence">Place of Residence</label>
+                      <input type="text" class="form-control" id="residence" name="residence">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="occupation">Occupation</label>
+                      <input type="text" class="form-control" id="occupation" name="occupation"> 
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="nationality">Nationality</label>
+                      <input type="text" class="form-control" id="nationality" name="nationality">
+                    </div>
+                  </div>
+                
+                  <div class="form-row d-flex justify-content-around">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sex" id="male" value="male" checked>
+                        <label class="form-check-label" for="male">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sex" id="female" value="female">
+                        <label class="form-check-label" for="female">
+                          Female
+                        </label>
+                      </div>
+
+                  </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="category">Category</label>
+                    <select id="category" class="form-control">
+                      <option selected>--Select Category--</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                
+                <button type="submit" class="btn btn-primary submit-btn">Register</button>
+              </form>
+            </div>
+        </div>
+
+ </div>
+
+    </div>
+    
+</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</html>

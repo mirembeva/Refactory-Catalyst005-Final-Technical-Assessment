@@ -1,0 +1,71 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title MinistryofHealth
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
+  link(rel='stylesheet' href='/ec.css')
+body
+    .container
+        .row.upper-div
+            .col-sm-5
+                .flag.black.vh-20
+                .flag.yellow
+                .flag.red
+            .col-sm-2
+                img.img-fluid(src='../images/court.jpg' alt='Responsive image' width='150px')
+            .col-sm-5
+                .flag.black
+                .flag.yellow
+                .flag.red
+        .header
+            | Ministry of Health
+            .header.covid
+            h4
+                b Covid-19 (Corona Virus)
+            .header
+            | Virus-Test Registration Form
+        .reg_form
+            form#testform(action='/test/test' method='POST' name='testform')
+                .form-row
+                    .form-group.col-md-6
+                        label(for='surname') Surname
+                        input#surname.form-control(type='text' name='surname')
+                        .error_message#wrongSurname
+                    .form-group.col-md-6
+                        label(for='givenname') Given Name
+                        input#givenname.form-control(type='text' name='givenname')
+                .form-row
+                    .form-group.col-md-6
+                        label(for='dateofbirth') Date Of Birth
+                        input#dateofbirth.form-control(type='date' name='dateofbirth' placeholder='YY/MM/DD')
+                    .form-group.col-md-6
+                        label(for='residence') Place of Residence
+                        input#residence.form-control(type='text' name='residence')
+                .form-row
+                    .form-group.col-md-6
+                        label(for='occupation') Occupation
+                        input#occupation.form-control(type='text' name='occupation')
+                    .form-group.col-md-6
+                        label(for='nationality') Nationality
+                        input#nationality.form-control(type='text' name='nationality')
+                .form-row.d-flex.justify-content-around
+                    .form-check
+                        input#male.form-check-input(type='radio' name='sex' value='male' checked='')
+                        label.form-check-label(for='male')
+                        | Male
+                    .form-check
+                        input#female.form-check-input(type='radio' name='sex' value='female')
+                        label.form-check-label(for='female')
+                        | Female
+                .form-row
+                    .form-group.col-md-12
+                        label(for='category') Category
+                        select#category.form-control(name='category')
+                            option(selected='') --Select Category--
+                    div.pull-right
+                        button.btn.btn-primary.submit-btn(type='submit') Register
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js' integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN' crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+    script(src='/ec.js')
